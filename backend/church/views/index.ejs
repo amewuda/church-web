@@ -1,0 +1,19 @@
+<%- include ("partials/header"); %>
+
+<h1 class="container">THE CHURCH OF PENTECOST</h1>
+<div class="container">
+    <% church.forEach(function(church){ %>
+    <div>
+        <h2> Name of ministry: <%=church.name_of_ministry %></h2>
+        <p> Speaker: <%= church.speaker %></p>
+        <p> Topic: <%= church.topic %></p>
+        <p> Attendance: <%= church.attendance %></p>
+        <p> Offering: <%= church.offering %></p>
+        <p> BODY: <%= church.body %></p>
+        <a href="/church/<%= church._id%>">READ MORE</a>
+    </div>
+<%}); %>
+</div>
+
+
+<%- include ("partials/footer"); %>
